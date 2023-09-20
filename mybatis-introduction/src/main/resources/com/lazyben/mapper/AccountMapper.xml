@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lazyben.mapper.AccountMapper">
+    <select id="selectUserById" resultType="account">
+        select * from account where id = #{id}
+    </select>
+    <select id="selectAllUsers" resultType="account">
+        select * from account
+    </select>
+    <update id="updateUser">
+        update account set balance = balance+100 where id = #{id}
+    </update>
+</mapper>
